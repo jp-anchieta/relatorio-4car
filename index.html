@@ -17,6 +17,7 @@
                         'dark-card': '#1f1f1f',
                         'story-color': '#009a50', // Verde para Stories
                         'reel-color': '#fcd34d',   // Amarelo para Reels
+                        'red-highlight': '#ef4444', // Vermelho para crescimento
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -30,27 +31,28 @@
         .header-bg {
             background: linear-gradient(180deg, #1f1f1f 0%, #141414 100%);
         }
-        /* Estilização customizada para a linha do tempo */
+        /* Estilização customizada para a linha do tempo oculta */
         .timeline {
             position: relative;
+            padding-left: 20px;
         }
         .timeline::before {
             content: '';
             position: absolute;
-            left: 10px; /* Alinha a linha central */
+            left: 10px; 
             top: 0;
             bottom: 0;
             width: 2px;
-            background: #374151; /* Cor da linha */
+            background: #374151; 
         }
         .timeline-item {
             position: relative;
-            margin-left: 40px; /* Espaço para o ícone */
-            padding-bottom: 20px;
+            margin-left: 30px; 
+            padding-bottom: 15px;
         }
         .timeline-icon {
             position: absolute;
-            left: -32px; /* Ajusta a posição do ícone sobre a linha */
+            left: -32px; 
             top: 4px;
             width: 24px;
             height: 24px;
@@ -58,17 +60,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
+            font-size: 10px;
+            font-weight: bold;
             color: #1f1f1f;
-            border: 2px solid #141414; /* Borda para destaque */
+            border: 2px solid #141414; 
             box-shadow: 0 0 0 3px #1f1f1f;
+        }
+        /* Estilos para o painel de detalhes (accordion) */
+        details[open] .timeline-toggle-icon {
+            transform: rotate(180deg);
         }
     </style>
 </head>
 <body class="bg-dark-bg text-gray-100 font-sans antialiased">
 
     <!-- Cabeçalho Principal -->
-    <header class="header-bg shadow-lg py-8 mb-10">
+    <header class="header-bg shadow-lg py-8 mb-6">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 text-white">
                 RELATÓRIO DE MÉTRICAS
@@ -76,15 +83,14 @@
             <h2 class="text-xl sm:text-2xl font-light text-car-green">
                 Henrique Maderite x 4Car
             </h2>
-            <p class="text-gray-400 mt-4 italic">
-                Usado e aprovado por HENRIQUE MADERITE
+            
+            <!-- Frase de Introdução -->
+            <p class="text-gray-400 mt-4 max-w-4xl mx-auto px-4">
+                **Divulgação 4Car** através do influenciador Henrique Maderite contendo direito de uso de imagem, stories, reels, envio de vídeos. Abaixo números compilados e destaques.
             </p>
-            <a href="#" class="inline-block mt-4 px-6 py-2 bg-car-green text-white text-lg font-semibold rounded-full hover:bg-green-600 transition duration-300 shadow-md">
-                Acesse nosso site
-            </a>
         </div>
     </header>
-
+    
     <main class="container mx-auto px-4 pb-12">
 
         <!-- Seção de Métricas Chave (Números) -->
