@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Métricas: Henrique Maderite x 4Car</title>
+    <!-- Carregando Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tailwind para cor primária e fonte -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'car-green': '#009a50', // Um verde inspirado na marca
+                        'dark-bg': '#141414',
+                        'dark-card': '#1f1f1f',
+                        'story-color': '#009a50', // Verde para Stories
+                        'reel-color': '#fcd34d',   // Amarelo para Reels
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilização para o gradiente de fundo no cabeçalho */
+        .header-bg {
+            background: linear-gradient(180deg, #1f1f1f 0%, #141414 100%);
+        }
+        /* Estilização customizada para a linha do tempo */
+        .timeline {
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px; /* Alinha a linha central */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #374151; /* Cor da linha */
+        }
+        .timeline-item {
+            position: relative;
+            margin-left: 40px; /* Espaço para o ícone */
+            padding-bottom: 20px;
+        }
+        .timeline-icon {
+            position: absolute;
+            left: -32px; /* Ajusta a posição do ícone sobre a linha */
+            top: 4px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #1f1f1f;
+            border: 2px solid #141414; /* Borda para destaque */
+            box-shadow: 0 0 0 3px #1f1f1f;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-gray-100 font-sans antialiased">
+
+    <!-- Cabeçalho Principal -->
+    <header class="header-bg shadow-lg py-8 mb-10">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 text-white">
+                RELATÓRIO DE MÉTRICAS
+            </h1>
+            <h2 class="text-xl sm:text-2xl font-light text-car-green">
+                Henrique Maderite x 4Car
+            </h2>
+            <p class="text-gray-400 mt-4 italic">
+                Usado e aprovado por HENRIQUE MADERITE
+            </p>
+            <a href="#" class="inline-block mt-4 px-6 py-2 bg-car-green text-white text-lg font-semibold rounded-full hover:bg-green-600 transition duration-300 shadow-md">
+                Acesse nosso site
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 pb-12">
+
+        <!-- Seção de Métricas Chave (Números) -->
+        <section class="mb-12">
+            <h3 class="text-3xl font-bold text-center mb-8 border-b-2 border-car-green pb-2">Números da Campanha</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Views Totais -->
+                <div class="bg-dark-card p-6 rounded-xl shadow-2xl text-center border-t-4 border-car-green transform hover:scale-[1.02] transition duration-300">
+                    <p class="text-5xl font-extrabold text-car-green mb-2">4,9M</p>
+                    <h4 class="text-xl font-semibold mb-1">Views Totais</h4>
+                    <p class="text-gray-400 text-sm">Alcance impressionante em toda campanha.</p>
+                </div>
+                
+                <!-- Card 2: Interações -->
+                <div class="bg-dark-card p-6 rounded-xl shadow-2xl text-center border-t-4 border-car-green transform hover:scale-[1.02] transition duration-300">
+                    <p class="text-5xl font-extrabold text-car-green mb-2">241K</p>
+                    <h4 class="text-xl font-semibold mb-1">Interações</h4>
+                    <p class="text-gray-400 text-sm">Engajamento genuíno e conversão.</p>
+                </div>
+
+                <!-- Card 3: Entregas Totais -->
+                <div class="bg-dark-card p-6 rounded-xl shadow-2xl text-center border-t-4 border-car-green transform hover:scale-[1.02] transition duration-300">
+                    <p class="text-5xl font-extrabold text-car-green mb-2">27</p>
+                    <h4 class="text-xl font-semibold mb-1">Entregas Totais</h4>
+                    <p class="text-gray-400 text-sm">Stories + Reels distribuídos estrategicamente.</p>
+                </div>
+            </div>
+
+            <p class="text-center italic text-lg text-gray-300 mt-8 max-w-3xl mx-auto">
+                "Autenticidade, presença e conexão geraram números expressivos para a marca."
+            </p>
+        </section>
+        
+        <hr class="border-gray-700 my-10">
+
+        <!-- Seção de Performance por Formato -->
+        <section class="mb-12">
+            <h3 class="text-3xl font-bold text-center mb-8 border-b-2 border-car-green pb-2">Performance por Formato</h3>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Stories Performance -->
+                <div class="bg-dark-card p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold mb-4 flex items-center text-car-green">
+                        <!-- Icone de Stories (Exemplo de SVG) -->
+                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        23 Stories
+                    </h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex justify-between items-center"><span class="font-semibold">Views:</span> <span class="text-xl text-white">1,48M</span></li>
+                        <li class="flex justify-between items-center"><span class="font-semibold">Interações:</span> <span class="text-xl text-white">22.885</span></li>
+                        <li class="flex justify-between items-center bg-gray-700/50 p-2 rounded-lg"><span class="font-semibold text-car-green">Média de Views por Story:</span> <span class="text-2xl font-extrabold text-car-green">64.619</span></li>
+                    </ul>
+                    <p class="mt-4 text-gray-400 italic">Insight: Presença contínua na rotina do público. <span class="font-bold text-white">Stories = Cadência</span>.</p>
+                </div>
+
+                <!-- Reels Performance -->
+                <div class="bg-dark-card p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold mb-4 flex items-center text-car-green">
+                        <!-- Icone de Reels (Exemplo de SVG) -->
+                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path></svg>
+                        4 Reels
+                    </h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex justify-between items-center"><span class="font-semibold">Views:</span> <span class="text-xl text-white">3,4M</span></li>
+                        <li class="flex justify-between items-center"><span class="font-semibold">Interações:</span> <span class="text-xl text-white">218.846</span></li>
+                        <li class="flex justify-between items-center bg-gray-700/50 p-2 rounded-lg"><span class="font-semibold text-car-green">Média de Views por Reel:</span> <span class="text-2xl font-extrabold text-car-green">851.658</span></li>
+                    </ul>
+                    <p class="mt-4 text-gray-400 italic">Insight: Picos massivos de alcance viral. <span class="font-bold text-white">Reels = Eventos</span>.</p>
+                </div>
+            </div>
+
+            <p class="text-center mt-8 text-lg bg-car-green/10 p-4 rounded-lg">
+                <span class="font-bold">Amplificação Multiplataforma:</span> A campanha contou com o uso da imagem do Maderite nos canais da 4Car (Instagram e Site). <br class="hidden sm:block">
+                <span class="font-bold text-car-green">Insight: Uso de Imagem = Alavanca</span> (Propriedade multiplica reconhecimento e conversão).
+            </p>
+        </section>
+
+        <hr class="border-gray-700 my-10">
+
+        <!-- Seção de Crescimento e Conclusão -->
+        <section class="mb-12">
+            <h3 class="text-3xl font-bold text-center mb-8 border-b-2 border-car-green pb-2">Resultados e Conclusão</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+                <!-- Crescimento SMS (Engagement, assumindo SMS = Stories/Metrics/Success) -->
+                <div class="bg-dark-card p-6 rounded-xl shadow-xl">
+                    <p class="text-5xl font-extrabold text-red-500 mb-2">185%</p>
+                    <h4 class="text-xl font-semibold">Crescimento nos Stories</h4>
+                    <p class="text-gray-400 text-sm">Entre o início e o final da campanha.</p>
+                </div>
+                <!-- Total Views (Repetição, mas importante) -->
+                <div class="bg-dark-card p-6 rounded-xl shadow-xl">
+                    <p class="text-5xl font-extrabold text-car-green mb-2">~5M</p>
+                    <h4 class="text-xl font-semibold">Visualizações Totais</h4>
+                    <p class="text-gray-400 text-sm">Total em todas as plataformas.</p>
+                </div>
+                <!-- Total Interações (Repetição, mas importante) -->
+                <div class="bg-dark-card p-6 rounded-xl shadow-xl">
+                    <p class="text-5xl font-extrabold text-car-green mb-2">+240 Mil</p>
+                    <h4 class="text-xl font-semibold">Interações Ativas</h4>
+                    <p class="text-gray-400 text-sm">Engajamento ativo com a comunidade.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 p-6 bg-car-green/20 rounded-xl text-center">
+                <p class="text-xl font-medium text-white mb-4">
+                    "Do feed do Maderite ao site da 4Car: consistência, alcance massivo e presença multiplataforma transformando audiência em influência real."
+                </p>
+                <h3 class="text-4xl font-extrabold text-car-green mt-6">OBRIGADO!</h3>
+            </div>
+        </section>
+
+        <hr class="border-gray-700 my-10">
+        
+        <!-- Seção Detalhada de Publicações (Timeline COMPLETA) -->
+        <section>
+            <h3 class="text-3xl font-bold text-center mb-8 border-b-2 border-car-green pb-2">Linha do Tempo Completa das Publicações (27)</h3>
+            
+            <div class="timeline max-w-xl mx-auto">
+                
+                <!-- Story 1: 17/09/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">17/09/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">38.470</span> | Interações: <span class="font-semibold">373</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 2: 17/09/24 (Duplicado no relatório) -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">17/09/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">36.092</span> | Interações: <span class="font-semibold">494</span></p>
+                    </div>
+                </div>
+                
+                <!-- Story 3: 19/09/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">19/09/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">50.308</span> | Interações: <span class="font-semibold">572</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 4: 01/10/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">01/10/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">40.110</span> | Interações: <span class="font-semibold">439</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 5: 16/10/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">16/10/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">35.398</span> | Interações: <span class="font-semibold">421</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 6: 16/10/24 (Duplicado no relatório) -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">16/10/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">33.931</span> | Interações: <span class="font-semibold">341</span></p>
+                    </div>
+                </div>
+
+                <!-- Reel 1: 18/10/24 - "SEXTOU!" (PICO 1) -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-reel-color">R</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-reel-color">
+                        <p class="text-sm font-bold text-reel-color mb-1">18/10/24: Reel - "SEXTOU!"</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">1.343.626</span> | Interações: <span class="font-semibold">123.389 totais</span></p>
+                        <p class="text-xs text-gray-500 mt-1">Pico de alcance massivo.</p>
+                    </div>
+                </div>
+
+                <!-- Story 7: 18/10/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">18/10/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">74.138</span> | Interações: <span class="font-semibold">1.441</span></p>
+                    </div>
+                </div>
+                
+                <!-- Story 8: 29/10/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">29/10/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">37.341</span> | Interações: <span class="font-semibold">512</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 9: 16/11/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">16/11/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">71.837</span> | Interações: <span class="font-semibold">1.352</span></p>
+                    </div>
+                </div>
+                
+                <!-- Story 10: 23/11/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">23/11/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">54.349</span> | Interações: <span class="font-semibold">732</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 11: 26/11/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">26/11/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">42.100</span> | Interações: <span class="font-semibold">953</span></p>
+                    </div>
+                </div>
+                
+                <!-- Story 12: 03/12/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">03/12/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">37.342</span> | Interações: <span class="font-semibold">462</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 13: 12/12/24 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">12/12/24: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">46.832</span> | Interações: <span class="font-semibold">373</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 14: 04/01/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">04/01/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">87.637</span> | Interações: <span class="font-semibold">2.008</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 15: 12/01/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">12/01/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">78.906</span> | Interações: <span class="font-semibold">1.054</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 16: 28/01/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">28/01/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">37.654</span> | Interações: <span class="font-semibold">715</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 17: 05/02/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">05/02/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">42.526</span> | Interações: <span class="font-semibold">752</span></p>
+                    </div>
+                </div>
+
+                <!-- Reel 2: 23/02/25 - "Dia do caçador!" (PICO 2) -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-reel-color">R</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-reel-color">
+                        <p class="text-sm font-bold text-reel-color mb-1">23/02/25: Reel - "Dia do caçador!"</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">1.018.824</span> | Interações: <span class="font-semibold">43.401 totais</span></p>
+                        <p class="text-xs text-gray-500 mt-1">Segundo maior pico de alcance.</p>
+                    </div>
+                </div>
+
+                <!-- Story 18: 27/02/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">27/02/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">42.282</span> | Interações: <span class="font-semibold">709</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 19: 27/02/25 (Duplicado no relatório) -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">27/02/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">41.491</span> | Interações: <span class="font-semibold">682</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 20: 06/03/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">06/03/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">57.385</span> | Interações: <span class="font-semibold">1.195</span></p>
+                    </div>
+                </div>
+
+                <!-- Reel 3: 24/03/25 - "Bom dia!!!" -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-reel-color">R</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-reel-color">
+                        <p class="text-sm font-bold text-reel-color mb-1">24/03/25: Reel - "Bom dia!!!"</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">290.080</span> | Interações: <span class="font-semibold">20.384 totais</span></p>
+                    </div>
+                </div>
+
+                <!-- Reel 4: 12/04/25 - "Tô indo e tô indo leve!!!!" -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-reel-color">R</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-reel-color">
+                        <p class="text-sm font-bold text-reel-color mb-1">12/04/25: Reel - "Tô indo e tô indo leve!!!!"</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">754.100</span> | Interações: <span class="font-semibold">31.672 totais</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 21: 16/04/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">16/04/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">45.390</span> | Interações: <span class="font-semibold">747</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 22: 22/04/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">22/04/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">74.679</span> | Interações: <span class="font-semibold">1.599</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 23: 07/05/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">07/05/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">49.583</span> | Interações: <span class="font-semibold">574</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 24: 17/05/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">17/05/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">47.662</span> | Interações: <span class="font-semibold">997</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 25: 10/06/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">10/06/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">45.842</span> | Interações: <span class="font-semibold">578</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 26: 02/07/25 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">02/07/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">113.883</span> | Interações: <span class="font-semibold">1.229</span></p>
+                    </div>
+                </div>
+
+                <!-- Story 27: 02/07/25 (Final da Campanha - Duplicado no relatório) -->
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-story-color">S</div>
+                    <div class="bg-dark-card p-4 rounded-lg shadow-lg border-l-4 border-story-color">
+                        <p class="text-sm font-bold text-story-color mb-1">02/07/25: Stories</p>
+                        <p class="text-xs text-gray-300">Views: <span class="font-semibold">123.077</span> | Interações: <span class="font-semibold">1.581</span></p>
+                        <p class="text-xs text-gray-500 mt-1">Maior alcance em Stories na campanha.</p>
+                    </div>
+                </div>
+                
+                <!-- Fim da Linha do Tempo -->
+            </div>
+
+            <p class="text-center text-sm text-gray-500 mt-8">
+                As 27 publicações (23 Stories e 4 Reels) estão detalhadas acima, mostrando a cadência e os picos de alcance.
+            </p>
+        </section>
+
+    </main>
+</body>
+</html>
